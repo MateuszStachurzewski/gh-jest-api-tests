@@ -1,0 +1,32 @@
+{
+  "name": "gh-jest-api-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tests": "jest",
+    "docker:build": "docker build -t gh-api-jest-tests .",
+    "docker:run": "docker run gh-api-jest-tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateuszStachurzewski/gh-jest-api-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MateuszStachurzewski/gh-jest-api-tests/issues"
+  },
+  "homepage": "https://github.com/MateuszStachurzewski/gh-jest-api-tests#readme",
+  "dependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/jest-json-schema": "^6.1.1",
+    "@types/supertest": "^2.0.12",
+    "jest": "^29.5.0",
+    "jest-json-schema": "^6.1.0",
+    "nock": "^13.3.0",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.0"
+  }
+}
