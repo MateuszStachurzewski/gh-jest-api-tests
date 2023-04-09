@@ -8,7 +8,7 @@ import updateAuthenticatedUserSchema from '../schemas/updateAuthenticatedUser.js
 
 expect.extend(matchers);
 
-type headers = {
+type Headers = {
   Accept: string;
   Authorization?: string;
   'X-GitHub-Api-Version': string;
@@ -16,7 +16,7 @@ type headers = {
 };
 
 const baseUrl: string = 'https://api.github.com';
-const headers: headers = {
+const headers: Headers = {
   Accept: 'application/vnd.github+json',
   Authorization: 'Bearer AccessToken',
   'X-GitHub-Api-Version': '2022-11-28',
