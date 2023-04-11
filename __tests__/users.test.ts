@@ -48,7 +48,7 @@ describe('Users', () => {
     describe('given no auth token is provided', () => {
       let res: supertest.Response;
 
-      beforeEach(async () => {
+      beforeAll(async () => {
         nock(baseUrl).get(path).reply(401, {
           message: 'Requires authentication',
           documentation_url:
@@ -77,7 +77,7 @@ describe('Users', () => {
     describe('given incorrect auth token is provided', () => {
       let res: supertest.Response;
 
-      beforeEach(async () => {
+      beforeAll(async () => {
         nock(baseUrl).get(path).reply(401, {
           message: 'Bad credentials',
           documentation_url: 'https://docs.github.com/rest',
@@ -348,7 +348,7 @@ describe('Users', () => {
     describe('given no auth token is provided', () => {
       let res: supertest.Response;
 
-      beforeEach(async () => {
+      beforeAll(async () => {
         nock(baseUrl).patch(path).reply(401, {
           message: 'Requires authentication',
           documentation_url:
@@ -380,7 +380,7 @@ describe('Users', () => {
     describe('given incorrect auth token is provided', () => {
       let res: supertest.Response;
 
-      beforeEach(async () => {
+      beforeAll(async () => {
         nock(baseUrl).patch(path).reply(401, {
           message: 'Bad credentials',
           documentation_url: 'https://docs.github.com/rest',
